@@ -197,7 +197,8 @@ export default function Hero() {
             style={{
               display: "flex",
               flexDirection: "column",
-              maxWidth: "680px",
+              maxWidth: "760px",
+              width: "100%",
             }}
           >
             {/* 1. "HELLO, I'M" — Uppercase, letter-spaced, muted, NO top line */}
@@ -247,16 +248,16 @@ export default function Hero() {
               }}
             />
 
-            {/* 4. Full Readable Role Line with Violet Dot Separators */}
+            {/* 4. Full Readable Role Line with Violet Dot Separators (Single Line on Desktop) */}
             <motion.div
               variants={itemVariants}
+              className="hero-role-line"
               style={{
                 display: "flex",
-                flexWrap: "wrap",
                 alignItems: "center",
                 gap: "0.85rem",
                 fontFamily: "var(--font-inter, sans-serif)",
-                fontSize: "clamp(1.15rem, 1.8vw, 1.45rem)",
+                fontSize: "clamp(1.05rem, 1.55vw, 1.38rem)",
                 fontWeight: 500,
                 color: "#C8C8C8",
                 margin: "0 0 1.65rem 0",
@@ -472,6 +473,15 @@ export default function Hero() {
 
       {/* Responsive Styles */}
       <style>{`
+        @media (min-width: 961px) {
+          .hero-grid {
+            grid-template-columns: 1.25fr 0.75fr !important;
+          }
+          .hero-role-line {
+            white-space: nowrap !important;
+            flex-wrap: nowrap !important;
+          }
+        }
         @media (max-width: 960px) {
           .hero-grid {
             grid-template-columns: 1fr !important;
@@ -479,6 +489,10 @@ export default function Hero() {
           }
           .hero-title {
             white-space: normal !important;
+          }
+          .hero-role-line {
+            white-space: normal !important;
+            flex-wrap: wrap !important;
           }
           .balloon-panel {
             height: 320px !important;
