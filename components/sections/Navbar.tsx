@@ -153,7 +153,7 @@ export default function Navbar() {
         {/* Right: Resume Button */}
         <div style={{ display: "flex", alignItems: "center" }} className="hidden-mobile">
           <a
-            href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/resume.pdf`}
+            href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-resume"
@@ -241,7 +241,7 @@ export default function Navbar() {
               ))}
               <li style={{ paddingTop: "0.75rem" }}>
                 <a
-                  href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/resume.pdf`}
+                  href="/resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-resume"
