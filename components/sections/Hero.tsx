@@ -263,11 +263,11 @@ export default function Hero() {
                 lineHeight: 1.3,
               }}
             >
-              <span>Software Developer</span>
+              <span>Student Developer</span>
               <span style={{ color: "#635BFF", fontSize: "1.1rem", margin: "0 0.15rem" }}>&bull;</span>
               <span>Tech Enthusiast</span>
               <span style={{ color: "#635BFF", fontSize: "1.1rem", margin: "0 0.15rem" }}>&bull;</span>
-              <span>Problem Solver</span>
+              <span>Open Source Contributor</span>
             </motion.div>
 
             {/* 5. Supporting Description */}
@@ -283,8 +283,8 @@ export default function Hero() {
                 maxWidth: "620px",
               }}
             >
-              Solving real-world problems through innovative solutions,
-              combining technical expertise with creativity.
+              Building practical solutions through code, exploring new technologies,
+              and turning ideas into meaningful digital experiences.
             </motion.p>
 
             {/* 6. Social Icon Buttons (GitHub, LinkedIn, LeetCode) */}

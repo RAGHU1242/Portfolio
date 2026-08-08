@@ -16,8 +16,8 @@ export const personal = {
   email: "m.raghavendra331@gmail.com",
   resumeUrl: "/resume.pdf",
   tagline:
-    "Solving real-world problems through innovative solutions,\ncombining technical expertise with creativity.",
-  roles: ["Software Developer", "Tech Enthusiast", "Problem Solver"],
+    "Building practical solutions through code, exploring new technologies, and turning ideas into meaningful digital experiences.",
+  roles: ["Student Developer", "Tech Enthusiast", "Open Source Contributor"],
   availableForOpportunities: true,
 };
 
