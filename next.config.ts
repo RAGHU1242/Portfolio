@@ -1,17 +1,22 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  // Next.js 16 uses Turbopack by default — no custom webpack config needed.
-  // Three.js / R3F are client-only (loaded via dynamic + ssr:false), so
-  // no special bundler config is required.
+const isProd = process.env.NODE_ENV === "production";
 
-  // Optimize images
+const nextConfig: NextConfig = {
+  // Static export for GitHub Pages deployment
+  output: "export",
+  basePath: isProd ? "/Portfolio" : "",
+  trailingSlash: true,
+
+  // Images must be unoptimized for static export hosting on GitHub Pages
   images: {
-    formats: ["image/avif", "image/webp"],
+    unoptimized: true,
   },
 
-  // Empty turbopack config to acknowledge Turbopack usage
-  experimental: {},
+  // Expose basePath to client components for asset linking (e.g. resume PDF)
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isProd ? "/Portfolio" : "",
+  },
 };
 
 export default nextConfig;
